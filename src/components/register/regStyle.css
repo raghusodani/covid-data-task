@@ -1,17 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
-
 * {
   box-sizing: border-box;
 }
 
 body {
   background-image: linear-gradient(90deg, #8368fc, #4931b3);
-  font-family: 'Roboto', sans-serif;
+  font-family: Helvetica, sans-serif;
 }
 
 .register-page h1 {
-  font-family: 'Roboto', sans-serif;
-  font-size: 28px;
+  font-family: Helvetica, sans-serif;
+  font-size: 30px;
 }
 
 .register-page {
@@ -34,11 +32,11 @@ body {
 }
 
 .form input {
-  font-family: 'Roboto', sans-serif;
+  font-family: Helvetica, sans-serif;
   outline: 0;
   background: #eeeded;
   box-sizing: border-box;
-  font-size: 14px;
+  font-size: 16px;
   width: 100%;
   padding: 15px;
   border: 0;
@@ -48,7 +46,7 @@ body {
 .form .message {
   margin: 15px 0 0;
   color: #b3b3b3;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .form .message a {
@@ -57,13 +55,13 @@ body {
 }
 
 .form button {
-  font-family: 'Roboto', sans-serif;
+  font-family: Helvetica, sans-serif;
   text-transform: uppercase;
   background: #6247da;
   outline: 0;
   color: #ffffff;
   border-radius: 10px;
-  font-size: 14px;
+  font-size: 16px;
   transition: all 0.3 ease;
   padding: 15px;
   cursor: pointer;
@@ -75,4 +73,35 @@ body {
 .form button:active,
 .form button:focus {
   background: #7c67db;
+}
+
+.form button:active {
+  transform: scale(0.9);
+}
+
+input:focus {
+  border: 2px solid #000;
+  border-radius: 10px;
+  outline: none;
+}
+
+.valid {
+  margin-top: -10px;
+  padding: 10px;
+  display: block;
+  line-height: 15px;
+  color: #d8000c;
+  background-color: #ffd2d2;
+  font-size: 16px;
+  font-weight: 0;
+}
+
+.valid:hover {
+  cursor: not-allowed;
+}
+
+#required-text {
+  font-size: 16px;
+  font-family: Helvetica, sans-serif;
+  color: #d8000c;
 }
