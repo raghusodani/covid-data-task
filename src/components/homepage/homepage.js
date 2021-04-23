@@ -14,6 +14,11 @@ function Homepage() {
     let path = '/register';
     history.push(path);
   };
+  const routeChange3 = () => {
+    console.log('yes clicked');
+    let path = '/dashboard';
+    history.push(path);
+  };
   const [isOpen, updateIsOpen] = useState(true);
   if (!isOpen) {
     console.log('yes clicked');
@@ -25,9 +30,10 @@ function Homepage() {
   }
   return (
     <div class='home-page'>
-      <h1> Home </h1>
+      <h1>Home</h1>
       <button onClick={routeChange1}> Login</button>
       <button onClick={routeChange2}> Register</button>
+      <button onClick={routeChange3}> dashboard</button>
     </div>
   );
 }
