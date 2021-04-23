@@ -76,9 +76,10 @@ body {
 }
 
 .form button:active {
-  transform: scale(0.9);
+  transform: scale(0.95);
 }
 
+/* 
 .valid {
   margin-top: -10px;
   padding: 10px;
@@ -92,7 +93,7 @@ body {
 
 .valid:hover {
   cursor: not-allowed;
-}
+} */
 
 #required-text {
   font-size: 16px;

@@ -3,10 +3,10 @@
 :root {
   --left-bg-color: rgba(46, 177, 57, 0.705);
   --right-bg-color: rgba(223, 64, 72, 0.637);
-  --left-btn-hover-color: rgba(28, 122, 28, 1);
+  --left-btn-hover-color: rgba(28, 122, 28, 0.664);
   --right-btn-hover-color: rgba(182, 21, 29, 0.637);
-  --hover-width: 75%;
-  --other-width: 25%;
+  --hover-width: 55%;
+  --other-width: 45%;
   --speed: 1000ms;
 }
 
@@ -21,7 +21,7 @@
   margin: -8px;
 }
 
-.dashboard h1 {
+.container h1 {
   font-size: 4rem;
   color: #fff;
   position: absolute;
@@ -60,7 +60,7 @@
 }
 
 .container {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100%;
   background: #333;

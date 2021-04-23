@@ -3,19 +3,68 @@ import Axios from 'axios';
 import './dashStyle.css';
 
 function Dash() {
+  const [state, setState] = useState({
+    isLeftOn: false,
+    isRightOn: false,
+  });
+
+  document.title = 'dashboard';
+  const isLeftOn = state.isLeftOn;
+  const isRightOn = state.isRightOn;
+
   return (
-    <div class='dashboard'>
-      <div class='split left'>
-        <h1>Donate Blood</h1>
-        <a href='#' class='btn'>
-          CLICK
-        </a>
-      </div>
-      <div class='split right'>
-        <h1>Request Blood</h1>
-        <a href='#' class='btn'>
-          CLICK
-        </a>
+    <div className='dashboard'>
+      <div
+        className={
+          'container' +
+          (isLeftOn ? ' hover-left' : '') +
+          (isRightOn ? ' hover-right' : '')
+        }
+      >
+        <div
+          className='split left'
+          onMouseEnter={() => {
+            console.log('left enter');
+            setState({
+              isLeftOn: true,
+              isRightOn: false,
+            });
+          }}
+          onMouseLeave={() => {
+            console.log('left leave');
+            setState({
+              isLeftOn: false,
+              isRightOn: false,
+            });
+          }}
+        >
+          <h1>Donate Blood</h1>
+          <a href='#' class='btn'>
+            CLICK
+          </a>
+        </div>
+        <div
+          className='split right'
+          onMouseEnter={() => {
+            console.log('right enter');
+            setState({
+              isLeftOn: false,
+              isRightOn: true,
+            });
+          }}
+          onMouseLeave={() => {
+            console.log('right leave');
+            setState({
+              isLeftOn: false,
+              isRightOn: false,
+            });
+          }}
+        >
+          <h1>Request Blood</h1>
+          <a href='#' class='btn'>
+            CLICK
+          </a>
+        </div>
       </div>
     </div>
   );

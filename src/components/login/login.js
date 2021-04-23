@@ -11,6 +11,7 @@ function Login() {
 
   let loginDone = false;
   function handleClick() {
+    document.title = 'login';
     console.log('post gayi');
     Axios.post('http://localhost:3001/login', {
       email: email,
@@ -37,7 +38,7 @@ function Login() {
         <input
           type='text'
           name='email'
-          placeholder='email'
+          placeholder='email*'
           onChange={(e) => {
             setEmail(e.target.value);
           }}
@@ -45,14 +46,14 @@ function Login() {
         <input
           type='password'
           name='password'
-          placeholder='Password'
+          placeholder='Password*'
           onChange={(e) => {
             setPassword(e.target.value);
           }}
         />
+        <p id='required-text'>* Required Fields</p>
         <button onClick={handleClick}>Login</button>
         <p>{loginStatus}</p>
-        =======
         <p class='message'>
           Not registered? <a href='/register'>Create an account</a>
         </p>

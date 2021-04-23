@@ -4,6 +4,7 @@ import Axios from 'axios';
 import './regStyle.css';
 
 function RegisterPage() {
+  document.title = 'register';
   const [userReg, setUserReg] = useState({
     name: '',
     email: '',

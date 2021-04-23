@@ -3,6 +3,7 @@ import { Redirect, useHistory } from 'react-router-dom';
 import './homeStyle.css';
 
 function Homepage() {
+  document.title = 'home';
   const history = useHistory();
   const routeChange1 = () => {
     console.log('yes clicked');
