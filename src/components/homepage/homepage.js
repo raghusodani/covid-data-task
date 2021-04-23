@@ -30,7 +30,7 @@ function Homepage() {
     updateIsOpen(!isOpen);
   }
   return (
-    <div class='home-page'>
+    <div className='home-page'>
       <h1>Home</h1>
       <button onClick={routeChange1}> Login</button>
       <button onClick={routeChange2}> Register</button>

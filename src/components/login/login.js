@@ -27,10 +27,10 @@ function Login() {
     });
   }
   return (
-    <div class='login-page form'>
+    <div className='login-page form'>
       <h1> Login </h1>
       <form
-        class='login-form'
+        className='login-form'
         onSubmit={(e) => {
           e.preventDefault();
         }}
@@ -54,7 +54,7 @@ function Login() {
         <p id='required-text'>* Required Fields</p>
         <button onClick={handleClick}>Login</button>
         <p>{loginStatus}</p>
-        <p class='message'>
+        <p className='message'>
           Not registered? <a href='/register'>Create an account</a>
         </p>
       </form>

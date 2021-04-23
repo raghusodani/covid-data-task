@@ -39,7 +39,7 @@ function Dash() {
           }}
         >
           <h1>Donate Blood</h1>
-          <a href='#' class='btn'>
+          <a href='#' className='btn'>
             CLICK
           </a>
         </div>
@@ -61,7 +61,7 @@ function Dash() {
           }}
         >
           <h1>Request Blood</h1>
-          <a href='#' class='btn'>
+          <a href='#' className='btn'>
             CLICK
           </a>
         </div>
