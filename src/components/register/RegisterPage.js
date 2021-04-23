@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import { FaHome } from 'react-icons/fa';
 import Axios from 'axios';
 import './regStyle.css';
 
@@ -110,6 +110,9 @@ function RegisterPage() {
 
   return (
     <div className='register-form'>
+      <a className='btnHome' href='/'>
+        <FaHome />
+      </a>
       <form className='form' onSubmit={submitForm}>
         <h1> Register </h1>
         <input

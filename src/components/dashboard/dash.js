@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Axios from 'axios';
+import { FaHome } from 'react-icons/fa';
 import './dashStyle.css';
 
 function Dash() {

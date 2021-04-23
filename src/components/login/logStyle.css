@@ -7,6 +7,14 @@ body {
   font-family: Helvetica, sans-serif;
 }
 
+.btnHome {
+  position: absolute;
+  top: 8px;
+  left: 6px;
+  color: white;
+  font-size: 30px;
+}
+
 .login-page h1 {
   font-family: Helvetica, sans-serif;
   font-size: 30px;
@@ -14,19 +22,19 @@ body {
 
 .login-page {
   width: 360px;
-  /* padding: 10% 0 0; */
-  /* margin: auto; */
+  padding: 10% 0 0;
+  margin: auto;
 }
 
 .form {
-  position: absolute;
-  left: 38%;
-  top: 25%;
+  position: relative;
+  top: 50%;
+  transform: translateY(50%);
   z-index: 1;
   background: #ffffff;
-  border-radius: 10px;
   max-width: 360px;
-  padding: 20px 45px;
+  margin: 0 auto 100px;
+  padding: 45px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 5px 5px 5px 0 rgba(0, 0, 0, 0.24);
 }

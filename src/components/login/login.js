@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaHome } from 'react-icons/fa';
 import { Redirect, useHistory } from 'react-router-dom';
 import Axios from 'axios';
 import './logStyle.css';
@@ -27,37 +28,42 @@ function Login() {
     });
   }
   return (
-    <div className='login-page form'>
-      <h1> Login </h1>
-      <form
-        className='login-form'
-        onSubmit={(e) => {
-          e.preventDefault();
-        }}
-      >
-        <input
-          type='text'
-          name='email'
-          placeholder='email*'
-          onChange={(e) => {
-            setEmail(e.target.value);
+    <div className='login-page'>
+      <a className='btnHome' href='/'>
+        <FaHome />
+      </a>
+      <div className='form'>
+        <h1> Login </h1>
+        <form
+          className='login-form'
+          onSubmit={(e) => {
+            e.preventDefault();
           }}
-        />
-        <input
-          type='password'
-          name='password'
-          placeholder='Password*'
-          onChange={(e) => {
-            setPassword(e.target.value);
-          }}
-        />
-        <p id='required-text'>* Required Fields</p>
-        <button onClick={handleClick}>Login</button>
-        <p>{loginStatus}</p>
-        <p className='message'>
-          Not registered? <a href='/register'>Create an account</a>
-        </p>
-      </form>
+        >
+          <input
+            type='text'
+            name='email'
+            placeholder='email*'
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+          />
+          <input
+            type='password'
+            name='password'
+            placeholder='Password*'
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
+          />
+          <p id='required-text'>* Required Fields</p>
+          <button onClick={handleClick}>Login</button>
+          <p>{loginStatus}</p>
+          <p className='message'>
+            Not registered? <a href='/register'>Create an account</a>
+          </p>
+        </form>
+      </div>
     </div>
   );
 }
