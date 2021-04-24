@@ -14,8 +14,8 @@ function App() {
         <Route exact path='/login' component={Login} />
         <Route exact path='/register' component={RegisterPage} />
         <Route exact path='/dashboard' component={Dash} />
-        <Route exact path='/requestblood' component={Donate} />
-        <Route exact path='/donateblood' component={Request} />
+        <Route exact path='/requestblood' component={Request} />
+        <Route exact path='/donateblood' component={Donate} />
         <Route exact path='/' component={Homepage} />
       </Switch>
     </BrowserRouter>
