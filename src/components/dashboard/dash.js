@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FaHome } from 'react-icons/fa';
-import {  useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import Axios from 'axios';
 import './dashStyle.css';
 
@@ -12,15 +12,13 @@ function Dash() {
     address: '',
     phone: '',
     bloodGroup: '',
-   
   });
   Axios.defaults.withCredentials = true;
-  useEffect( () => {
-    Axios.get("http://localhost:3001/login").then( (response) => {
+  useEffect(() => {
+    Axios.get('http://localhost:3001/login').then((response) => {
       console.log(response.data);
-      
     });
-  },[]);
+  }, []);
   const [state, setState] = useState({
     isLeftOn: false,
     isRightOn: false,
@@ -29,12 +27,12 @@ function Dash() {
   document.title = 'Dashboard';
   const isLeftOn = state.isLeftOn;
   const isRightOn = state.isRightOn;
-  const donate  = () =>{
-    history.push("/donateblood");
-  }
+  const donate = () => {
+    history.push('/donateblood');
+  };
   const request = () => {
-    history.push("/requestblood");
-  }
+    history.push('/requestblood');
+  };
 
   return (
     <div className='dashboard'>
@@ -48,14 +46,12 @@ function Dash() {
         <div
           className='split left'
           onMouseEnter={() => {
-            
             setState({
               isLeftOn: true,
               isRightOn: false,
             });
           }}
           onMouseLeave={() => {
-            
             setState({
               isLeftOn: false,
               isRightOn: false,
@@ -63,7 +59,7 @@ function Dash() {
           }}
         >
           <h1>Donate Blood</h1>
-          <a href='#' onClick = {donate} className='btn'>
+          <a onClick={donate} className='btn'>
             CLICK
           </a>
         </div>
@@ -85,7 +81,7 @@ function Dash() {
           }}
         >
           <h1>Request Blood</h1>
-          <a onClick = {request} className='btn'>
+          <a onClick={request} className='btn'>
             CLICK
           </a>
         </div>
