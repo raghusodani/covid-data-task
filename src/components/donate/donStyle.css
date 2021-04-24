@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(90deg, #8368fc, #4931b3);
+  font-family: Helvetica, sans-serif;
+  overflow: visible;
+}
+
+.donate-request .btnHome {
+  position: absolute;
+  top: 8px;
+  left: 6px;
+  color: #6f53eb;
+  font-size: 30px;
+  z-index: 1;
+}
+
+.donate-request h1 {
+  font-family: Helvetica, sans-serif;
+  font-size: 30px;
+}
+
+.donate-request {
+  width: 360px;
+  padding: 10% 0 0;
+  margin: auto;
+}
+
+.topbar {
+  /* position: relative;
+  top: 0;
+  z-index: 1;
+  width: 1000%;
+  background: #fff;
+  padding: 50px; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  background: #ffffff;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 5px 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.topbar span {
+  display: block;
+}
+
+.donate-request .form {
+  position: relative;
+  top: 50%;
+  transform: translateY(50%);
+  z-index: 1;
+  background: #ffffff;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 5px 5px 5px 0 rgba(0, 0, 0, 0.24);
+}

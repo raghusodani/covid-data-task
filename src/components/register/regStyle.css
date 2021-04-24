@@ -114,3 +114,14 @@ input:focus {
   font-family: Helvetica, sans-serif;
   color: #d8000c;
 }
+
+.isDonor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2px;
+}
+
+.isDonor span {
+  margin: 6px;
+}
