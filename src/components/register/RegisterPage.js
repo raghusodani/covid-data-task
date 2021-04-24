@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { FaHome } from 'react-icons/fa';
 import Axios from 'axios';
+import Switch from 'react-switch';
 import './regStyle.css';
+import { useHistory } from 'react-router';
 
 function RegisterPage() {
+  let history = useHistory();
   document.title = 'register';
   const [userReg, setUserReg] = useState({
     name: '',
@@ -12,6 +15,7 @@ function RegisterPage() {
     phone: '',
     bloodGroup: '',
     password: '',
+    isDonor: 'no',
   });
   let flag = 1;
 
@@ -101,11 +105,24 @@ function RegisterPage() {
         phone: userReg.phone,
         bloodGroup: userReg.bloodGroup,
         password: userReg.password,
-      }).then(() => {
-        console.log('success');
+        isDonor : userReg.isDonor,
+
+      }).then((response) => {
+        console.log(response);
+        
+         history.push('/login');
       });
     }
     e.target.reset();
+  };
+  const [checkState, setCheckState] = useState(false);
+  // console.log(userReg.isDonor);
+  const handleChange = (e) => {
+    // console.log(e);
+    if (e) {
+      setUserReg({ ...userReg, isDonor: 'yes' });
+    } else setUserReg({ ...userReg, isDonor: 'no' });
+    setCheckState(e);
   };
 
   return (
@@ -163,11 +180,13 @@ function RegisterPage() {
           onChange={handleInput}
         />
         {errors.password && <p className='valid'>{errors.password}</p>}
+        <label className='isDonor'>
+          <span>Are you a donor? </span>
+          <Switch onChange={handleChange} checked={checkState} />
+        </label>
         <p id='required-text'>* Required Fields</p>
         <button type='submit'>Submit</button>
-        {/* {nameList.map((val) => {
-          return (<h1> Name :{val.name} </h1>);
-        })} */}
+        
         <p className='message'>
           Already registered? <a href='/login'>Log In</a>
         </p>
