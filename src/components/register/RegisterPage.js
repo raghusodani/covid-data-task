@@ -105,12 +105,11 @@ function RegisterPage() {
         phone: userReg.phone,
         bloodGroup: userReg.bloodGroup,
         password: userReg.password,
-        isDonor : userReg.isDonor,
-
+        isDonor: userReg.isDonor,
       }).then((response) => {
         console.log(response);
-        
-         history.push('/login');
+
+        history.push('/login');
       });
     }
     e.target.reset();
@@ -186,7 +185,7 @@ function RegisterPage() {
         </label>
         <p id='required-text'>* Required Fields</p>
         <button type='submit'>Submit</button>
-        
+
         <p className='message'>
           Already registered? <a href='/login'>Log In</a>
         </p>

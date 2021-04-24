@@ -14,7 +14,7 @@ function Dash() {
     bloodGroup: '',
   });
   Axios.defaults.withCredentials = true;
-  
+
   const [state, setState] = useState({
     isLeftOn: false,
     isRightOn: false,
@@ -56,7 +56,7 @@ function Dash() {
         >
           <h1>Donate Blood</h1>
           <a onClick={donate} className='btn'>
-            CLICK
+            Donate
           </a>
         </div>
         <div
@@ -78,7 +78,7 @@ function Dash() {
         >
           <h1>Request Blood</h1>
           <a onClick={request} className='btn'>
-            CLICK
+            request
           </a>
         </div>
       </div>
