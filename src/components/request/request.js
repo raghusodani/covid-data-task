@@ -27,16 +27,29 @@ function Request() {
         bloodgroup: bloodg,
       }).then((response) => {
         limit = response.data.length;
-        console.log(limit);
-        setUserArray([
-          ...userArray,
-          {
-            name: response.data.user[0].name,
-            email: response.data.user[0].email,
-            address: response.data.user[0].address,
-            phone: response.data.user[0].phone,
-          },
-        ]);
+        console.log(response.data.length);
+        
+        for(let i =0 ; i<response.data.length ;i++){
+          const newUser = {
+            name: response.data[i].name,
+            email: response.data[i].email,
+            address: response.data[i].address,
+             phone: response.data[i].phone,
+          };
+          console.log(newUser);
+          setUserArray([
+               ...userArray,newUser]);
+        }
+      //  console.log(userArray);
+        // setUserArray([
+        //   ...userArray,
+        //   {
+        //     name: response.data.user[0].name,
+        //     email: response.data.user[0].email,
+        //     address: response.data.user[0].address,
+        //     phone: response.data.user[0].phone,
+        //   },
+        // ]);
       });
     }
   });
@@ -55,7 +68,7 @@ function Request() {
 
       <div className='form'>
       {userArray.map((value) => {
-        return (
+        
           <div>
             <h1>{value.name}</h1>
             <h1>{value.email}</h1>
@@ -63,8 +76,8 @@ function Request() {
             <h1>{value.address}</h1>
           </div>
           
-        );
-      }}
+        
+      })}
       </div>
     </div>
   );

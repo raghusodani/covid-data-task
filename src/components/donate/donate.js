@@ -26,7 +26,7 @@ function Donate() {
           console.log(limit);
           if (limit < 10) {
             console.log('10 m aaya');
-            setMessage(bloodg + 'Your welcum');
+            setMessage(bloodg + '\n\n You can visit your nearest hospital or blood bank.\n Thanks for your valuable contribution to the society!');
           } else {
             setMessage('bheed cum');
           }
