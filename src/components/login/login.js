@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaHome } from 'react-icons/fa';
 import { Redirect, useHistory } from 'react-router-dom';
 import Axios from 'axios';
@@ -11,6 +11,9 @@ function Login() {
   const [loginStatus, setLoginStatus] = useState('');
 
   let loginDone = false;
+  Axios.defaults.withCredentials = true;
+
+
   function handleClick() {
     document.title = 'login';
     console.log('post gayi');
@@ -27,6 +30,12 @@ function Login() {
       }
     });
   }
+
+  useEffect( () => {
+    Axios.get("http://localhost:3001/login").then( (response) => {
+      console.log(response);
+    });
+  },[]);
   return (
     <div className='login-page'>
       <a className='btnHome' href='/'>

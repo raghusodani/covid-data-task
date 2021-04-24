@@ -4,6 +4,8 @@ import Homepage from './components/homepage/homepage.js';
 import Login from './components/login/login.js';
 import RegisterPage from './components/register/RegisterPage.js';
 import Dash from './components/dashboard/dash';
+import Donate from './components/donate/donate';
+import Request from './components/request/request';
 function App() {
   return (
     <BrowserRouter>
@@ -12,6 +14,8 @@ function App() {
         <Route exact path='/login' component={Login} />
         <Route exact path='/register' component={RegisterPage} />
         <Route exact path='/dashboard' component={Dash} />
+        <Route exact path='/requestblood' component={Donate} />
+        <Route exact path='/donateblood' component={Request} />
         <Route exact path='/' component={Homepage} />
       </Switch>
     </BrowserRouter>

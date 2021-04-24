@@ -25,10 +25,6 @@ function Homepage() {
     console.log('yes clicked');
     return <Redirect to='/test' />;
   }
-  // eslint-disable-next-line
-  function handleClick() {
-    updateIsOpen(!isOpen);
-  }
   return (
     <div className='home-page'>
       <div className='form'>
