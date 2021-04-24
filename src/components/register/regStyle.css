@@ -4,7 +4,7 @@
 
 body {
   background-image: linear-gradient(90deg, #8368fc, #4931b3);
-  overflow: hidden;
+  /* overflow: hidden; */
   font-family: Helvetica, sans-serif;
 }
 

@@ -13,7 +13,6 @@ function Login() {
   let loginDone = false;
   Axios.defaults.withCredentials = true;
 
-
   function handleClick() {
     document.title = 'login';
     console.log('post gayi');
@@ -31,11 +30,11 @@ function Login() {
     });
   }
 
-  useEffect( () => {
-    Axios.get("http://localhost:3001/login").then( (response) => {
+  useEffect(() => {
+    Axios.get('http://localhost:3001/login').then((response) => {
       console.log(response);
     });
-  },[]);
+  }, []);
   return (
     <div className='login-page'>
       <a className='btnHome' href='/'>

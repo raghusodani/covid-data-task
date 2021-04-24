@@ -5,6 +5,7 @@
 body {
   background-image: linear-gradient(90deg, #8368fc, #4931b3);
   font-family: Helvetica, sans-serif;
+  overflow: visible;
 }
 
 .btnHome {
