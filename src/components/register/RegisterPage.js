@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-
+import { FaHome } from 'react-icons/fa';
 import Axios from 'axios';
 import './regStyle.css';
 
 function RegisterPage() {
+  document.title = 'register';
   const [userReg, setUserReg] = useState({
     name: '',
     email: '',
@@ -108,8 +109,11 @@ function RegisterPage() {
   };
 
   return (
-    <div class='register-form'>
-      <form class='form' onSubmit={submitForm}>
+    <div className='register-form'>
+      <a className='btnHome' href='/'>
+        <FaHome />
+      </a>
+      <form className='form' onSubmit={submitForm}>
         <h1> Register </h1>
         <input
           type='text'
@@ -118,7 +122,7 @@ function RegisterPage() {
           autoComplete='off'
           onChange={handleInput}
         ></input>
-        {errors.name && <p class='valid'>{errors.name}</p>}
+        {errors.name && <p className='valid'>{errors.name}</p>}
         <input
           type='text'
           name='email'
@@ -126,7 +130,7 @@ function RegisterPage() {
           autoComplete='off'
           onChange={handleInput}
         ></input>
-        {errors.email && <p class='valid'>{errors.email}</p>}
+        {errors.email && <p className='valid'>{errors.email}</p>}
         <input
           type='text'
           name='address'
@@ -134,7 +138,7 @@ function RegisterPage() {
           autoComplete='off'
           onChange={handleInput}
         ></input>
-        {errors.address && <p class='valid'>{errors.address}</p>}
+        {errors.address && <p className='valid'>{errors.address}</p>}
         <input
           type='text'
           name='phone'
@@ -142,7 +146,7 @@ function RegisterPage() {
           autoComplete='off'
           onChange={handleInput}
         ></input>
-        {errors.phone && <p class='valid'>{errors.phone}</p>}
+        {errors.phone && <p className='valid'>{errors.phone}</p>}
         <input
           type='text'
           name='bloodGroup'
@@ -150,7 +154,7 @@ function RegisterPage() {
           autoComplete='off'
           onChange={handleInput}
         ></input>
-        {errors.bloodGroup && <p class='valid'>{errors.bloodGroup}</p>}
+        {errors.bloodGroup && <p className='valid'>{errors.bloodGroup}</p>}
         <input
           type='password'
           name='password'
@@ -158,13 +162,13 @@ function RegisterPage() {
           autoComplete='off'
           onChange={handleInput}
         />
-        {errors.password && <p class='valid'>{errors.password}</p>}
+        {errors.password && <p className='valid'>{errors.password}</p>}
         <p id='required-text'>* Required Fields</p>
         <button type='submit'>Submit</button>
         {/* {nameList.map((val) => {
           return (<h1> Name :{val.name} </h1>);
         })} */}
-        <p class='message'>
+        <p className='message'>
           Already registered? <a href='/login'>Log In</a>
         </p>
       </form>
